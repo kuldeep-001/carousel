@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #fff;
+  
+}
+.container{
+  position: absolute;
+  width: 1450px;
+  height: 380px;
+  left: 60px;
+  top: 106px;
+}
+
+.note {
+  background: #fff;
+  
+  
+  position: relative;
+  width: 320px;
+  height: 380px;
+  margin: 16px;
+  border: 1px solid #ECECEC;
+  box-sizing: border-box;
+  
+  border-radius: 8px;
+  
+  
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.note:hover{
+  border-radius: 8px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
+.logo{
+  height: 179.44px;
+  width: 319px;
+  text-align: center;
+  background-color: #FF6F61;
+  border-top-left-radius:8px;
+  border-top-right-radius:8px;
+  
+  display: flex;
+}
+.logo>img{
+  height: 160px;
+  width: 160px;
+  margin-left: 80px;
+  
+}
+
+.tag{
+  align-items: center;
+  padding: 0px 12px;
+  
+  position: absolute;
+  width: 62px;
+  height: 25px;
+  background: #303133;
+  color: #eee;
+  margin-left: 11px;
+  margin-top: 8px;
+  font-size: 11px;
+  border-radius: 14px;
+  
+  
+}
+.wish{
+  position: absolute;
+  right: 12px;
+  top: 11px;
+}
+.wish img{
+  height: 18px;
+  width: 20px;
+}
+.wish{
+  height: 18px;
+  width: 20px;
+}
+.tag p{
+  
+height: 15px;
+
+
+
+
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+padding-top: 5px;
+
+/* identical to box height, or 136% */
+text-align: center;
+letter-spacing: -0.08px;
+
+/* Basic / White */
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.category{
+  position: absolute;
+  top: 195px;
+  left: 13px;
+  font-family: Noto Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 18px;
+width: 122px;
+height: 18px;
+color: #303133;
+}
+.infodiv{
+  position: absolute;
+  top: 233px;
+  left: 13px;
+  width: 176px;
+height: 41px;
+font-family: Noto Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 41px;
+
+/* identical to box height */
+letter-spacing: -0.24px;
+
+color: #000000;
+}
+.infodesc{
+  position: absolute;
+  top: 282px;
+  left: 13px;
+  width: 292px;
+height: 48px;
+font-family: Noto Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+
+/* or 150% */
+
+color: #303133;
+}
+
+.exp{
+  position: absolute;
+  margin-top: 22px;
+  
+  width: 131px;
+height: 16px;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+color: #303133;
+}
+
+.head{
+  display: flex;
+  
+  height: 50px;
+}
+.arrow{
+  position:absolute;
+  right: 55px;
+  margin-bottom: 60px;
+}
+.slidenum{
+  position:absolute;
+  right: 147px;
+  margin-top: 10px;
+  width: 35px;
+height: 20px;
+
+font-style: normal;
+font-weight: normal;
+}
+.heading{
+  position: absolute;
+width: 668px;
+height: 30px;
+font-family: Noto Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+left:16px;
+}
+.learn{
+  color: #F58532;
+}
+#show{
+  display: inline-flex;
+  margin-left: 5px;
+  width: 50px;
+}
