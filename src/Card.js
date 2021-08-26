@@ -3,15 +3,20 @@ import React,{useState} from "react";
 import Toggle from "./Note.js"
 
 import Arrow from "./Arrow.png";
+import img from "./image.png";
 
 function Card(props){
   const [isShown, setIsShown] = useState(false);
+  
+  
+  
+  
   return (
     <div className="note" onMouseEnter={() => setIsShown(true)}
     onMouseLeave={() => setIsShown(false)}>
       <div className="logo">
         <div className="tag"><p>instore</p></div>
-        <img src={props.img} alt="1mg" />
+        <img src={props.imag} />
         <Toggle />
       </div>
       <div className="category">{props.category}</div>
@@ -27,6 +32,7 @@ function Card(props){
 
     </div>
   )
+
 }
 
 

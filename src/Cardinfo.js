@@ -2,7 +2,7 @@ import img from "./image.png";
 const cardinfo=[
     {
         id:1,
-        image:"./image.png",
+        
         category:"Health & Wellness",
         info:"1mg",
         description:"Flat 70% off on prescription medicines",
@@ -10,7 +10,7 @@ const cardinfo=[
     },
     {
         id:2,
-        image:{img},
+        
         category:"Health & Wellness",
         info:"1mg",
         description:"Flat 70% off on prescription medicines",
@@ -18,7 +18,7 @@ const cardinfo=[
     },
     {
         id:3,
-        image:{img},
+        
         category:"Health & Wellness",
         info:"1mg",
         description:"Flat 70% off on prescription medicines",
@@ -26,7 +26,7 @@ const cardinfo=[
     },
     {
         id:4,
-        image:{img},
+        
         category:"Health & Wellness",
         info:"1mg",
         description:"Flat 70% off on prescription medicines",
@@ -34,7 +34,7 @@ const cardinfo=[
     },
     {
         id:5,
-        image:{img},
+        
         category:"Health & Wellness",
         info:"1mg",
         description:"Flat 70% off on prescription medicines",
@@ -42,7 +42,7 @@ const cardinfo=[
     },
     {
         id:6,
-        image:{img},
+        
         category:"Health & Wellness",
         info:"1mg",
         description:"Flat 70% off on prescription medicines",
@@ -50,7 +50,15 @@ const cardinfo=[
     },
     {
         id:7,
-        image:{img},
+        
+        category:"Health & Wellness",
+        info:"1mg",
+        description:"Flat 70% off on prescription medicines",
+        expirees:"Expiress: Nov 30, 2021"
+    },
+    {
+        id:8,
+        
         category:"Health & Wellness",
         info:"1mg",
         description:"Flat 70% off on prescription medicines",

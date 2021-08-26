@@ -9,12 +9,14 @@ html {
 body {
   background: #fff;
   
+  
 }
+
 .container{
   position: absolute;
-  width: 1450px;
+  width: 1485px;
   height: 380px;
-  left: 60px;
+  left: 50px;
   top: 106px;
 }
 
@@ -47,6 +49,7 @@ body {
   border-radius: 8px;
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.12);
   display: block;
+  cursor:pointer;
 }
 
 .logo{
@@ -187,12 +190,12 @@ color: #303133;
 }
 .arrow{
   position:absolute;
-  right: 55px;
+  right: 92px;
   margin-bottom: 60px;
 }
 .slidenum{
   position:absolute;
-  right: 147px;
+  right: 175px;
   margin-top: 10px;
   width: 35px;
 height: 20px;

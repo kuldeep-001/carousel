@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-
+import img from "./image.png";
 import './App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,7 +9,7 @@ import rightarr from "./rightarrow.png";
 import Card from "./Card.js";
 import cardinfo from "./Cardinfo.js";
 
-/*function SampleArrow(props) {
+function SampleArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -20,16 +20,22 @@ import cardinfo from "./Cardinfo.js";
     
     
   );
-}*/
+}
 function Cards(content) {
+  let names=[img,img,img,img,img,img,img,img];
+  let images = names[content.id-1];
   return (
     
     <Card
-      img={content.image}
+      imag={images}
+      idx={content.id}
+      key={content.id}
+      
       category={content.category}
       info={content.info}
       description={content.description}
-      expirees={content.expirees} />
+      expirees={content.expirees}
+       />
   );
 }
 
@@ -40,10 +46,19 @@ export default class App extends Component {
     this.previous = this.previous.bind(this);
   }
   next() {
-    this.slider.slickNext();
+    if (this.state.currentSlide < cardinfo.length-4){
+      this.slider.slickNext();
+    }
+    
   }
   previous() {
+    
+    /*if (this.state.currentSlide == cardinfo.length-4){
+      this.slider.slickGoTo(0);
+    }
+    else {}*/
     this.slider.slickPrev();
+    
   }
   state = { currentSlide: 0 };
 
@@ -64,6 +79,9 @@ export default class App extends Component {
       slidesToScroll: 1,
       variableWidth: true,
       adaptiveHeight: true,
+      nextArrow: <SampleArrow />,
+      prevArrow: <SampleArrow />,
+      
       afterChange: this.handleAfterChange
     };
     return (
