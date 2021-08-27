@@ -64,5 +64,14 @@ const cardinfo=[
         description:"Flat 70% off on prescription medicines",
         expirees:"Expiress: Nov 30, 2021"
     }
+    ,
+    {
+        id:9,
+        
+        category:"Health & Wellness",
+        info:"1mg",
+        description:"Flat 70% off on prescription medicines",
+        expirees:"Expiress: Nov 30, 2021"
+    }
 ];
 export default cardinfo;

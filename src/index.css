@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Noto Sans';
 }
 body {
   background: #fff;
@@ -16,8 +16,9 @@ body {
   position: absolute;
   width: 1485px;
   height: 380px;
-  left: 50px;
+  left: 3%;
   top: 106px;
+
 }
 
 .note {
@@ -190,12 +191,12 @@ color: #303133;
 }
 .arrow{
   position:absolute;
-  right: 92px;
+  right: 4%;
   margin-bottom: 60px;
 }
 .slidenum{
   position:absolute;
-  right: 175px;
+  right: 145px;
   margin-top: 10px;
   width: 35px;
 height: 20px;
@@ -221,3 +222,81 @@ left:16px;
   margin-left: 5px;
   width: 50px;
 }
+
+/*responsive*/
+
+@media only screen and (max-width: 600px) and (min-width:300px) {
+  .container{
+    width: 400px;
+  }
+  .heading{
+    width: 400px;
+  }
+  .slidenum{ 
+    left: 250px;
+    display: none;
+  }
+  .arrow{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) and (min-width:300px){
+  .container{
+    width: 350px;
+  }
+  .heading{
+    width: 350px;
+  }
+  .note{
+    margin-left: 0;
+    width: 300px;
+  }
+  .logo{
+    width: 300px;
+  }
+  .slidenum{
+    left: 210px;
+    display: none;
+  }
+  .arrow{
+    display: none;
+  }
+  
+}
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
+  .container{
+    width: 730px;
+    height: 400px;
+  }
+  .heading{
+    width: 730px;
+  }
+  .note{
+    margin-left: 0px;
+    width: 160px;
+    height: 400px;
+  }
+  .logo{
+    width: 160px;
+  }
+  .slidenum{
+    right:110px;
+  }
+  .logo>img{
+    width:100px;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: 35px;
+  }
+  .infodesc{
+    width: 155px;
+    font-size: 14px;
+    padding-right: 8px;
+  }
+  .exp{
+    top:65px;
+  }
+}
+
+

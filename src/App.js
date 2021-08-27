@@ -22,7 +22,7 @@ function SampleArrow(props) {
   );
 }
 function Cards(content) {
-  let names=[img,img,img,img,img,img,img,img];
+  let names=[img,img,img,img,img,img,img,img,img];
   let images = names[content.id-1];
   return (
     
@@ -46,7 +46,7 @@ export default class App extends Component {
     this.previous = this.previous.bind(this);
   }
   next() {
-    if (this.state.currentSlide < cardinfo.length-4){
+    if (this.state.currentSlide < cardinfo.length-1){
       this.slider.slickNext();
     }
     
@@ -61,6 +61,7 @@ export default class App extends Component {
     
   }
   state = { currentSlide: 0 };
+  
 
  handleAfterChange = index => {
     console.log("after change", index);
@@ -75,14 +76,41 @@ export default class App extends Component {
       
       
       infinite: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+      slidesToShow: 4,
+      slidesToScroll: 4,
       variableWidth: true,
       adaptiveHeight: true,
       nextArrow: <SampleArrow />,
       prevArrow: <SampleArrow />,
       
-      afterChange: this.handleAfterChange
+      afterChange: this.handleAfterChange,
+      initialSlide: 0,
+      
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
     return (
   <div className="container">
@@ -90,7 +118,8 @@ export default class App extends Component {
     <div className="heading"><span>Hi Srinivasan</span></div>
     <div className="slidenum">
           {" "}
-          {this.state.currentSlide + 1} / {cardinfo.length-3}{" "}
+          
+          {Math.ceil(this.state.currentSlide/settings.slidesToShow) + 1} / {Math.ceil(cardinfo.length/settings.slidesToShow)}{" "}
     </div>
     <div className="arrow" style={{ textAlign: "right"}}>
           

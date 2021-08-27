@@ -14,6 +14,7 @@ function Card(props){
   return (
     <div className="note" onMouseEnter={() => setIsShown(true)}
     onMouseLeave={() => setIsShown(false)}>
+
       <div className="logo">
         <div className="tag"><p>instore</p></div>
         <img src={props.imag} />
