@@ -9,6 +9,8 @@ import rightarr from "./rightarrow.png";
 import Card from "./Card.js";
 import cardinfo from "./Cardinfo.js";
 
+
+
 function SampleArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -44,10 +46,14 @@ export default class App extends Component {
     super(props);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
+
   }
   next() {
-    if (this.state.currentSlide < cardinfo.length-1){
+    if (this.state.counter + 1 < Math.ceil(cardinfo.length/4)){
       this.slider.slickNext();
+      this.setState({
+        counter: this.state.counter + 1
+      });
     }
     
   }
@@ -57,10 +63,14 @@ export default class App extends Component {
       this.slider.slickGoTo(0);
     }
     else {}*/
+    if (this.state.counter+1>1){
     this.slider.slickPrev();
-    
+    this.setState({
+      counter: this.state.counter - 1
+    });
   }
-  state = { currentSlide: 0 };
+  }
+  state = { currentSlide: 0, counter:0};
   
 
  handleAfterChange = index => {
@@ -70,15 +80,14 @@ export default class App extends Component {
     });
   };
   render() {
-
-    const settings = {
-      className: "slider variable-width",
+    
+    var settings = {
+      
       
       
       infinite: false,
-      slidesToShow: 4,
+      slidesToShow: 4.1,
       slidesToScroll: 4,
-      variableWidth: true,
       adaptiveHeight: true,
       nextArrow: <SampleArrow />,
       prevArrow: <SampleArrow />,
@@ -90,7 +99,15 @@ export default class App extends Component {
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 4,
+            slidesToShow: 4.1,
+            slidesToScroll: 4,
+            
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 4.1,
             slidesToScroll: 4,
             
           }
@@ -98,15 +115,15 @@ export default class App extends Component {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             initialSlide: 1
           }
         },
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 1.1,
             slidesToScroll: 1
           }
         }
@@ -119,9 +136,9 @@ export default class App extends Component {
     <div className="slidenum">
           {" "}
           
-          {Math.ceil(this.state.currentSlide/settings.slidesToShow) + 1} / {Math.ceil(cardinfo.length/settings.slidesToShow)}{" "}
+          {this.state.counter+ 1} / {Math.ceil(cardinfo.length/4)}{" "}
     </div>
-    <div className="arrow" style={{ textAlign: "right"}}>
+    <div className="arrow" style={{ textAlign: "left"}}>
           
           <img src={leftarr} onClick={this.previous} style={{marginRight:"8px"}}/>
           
