@@ -13,6 +13,7 @@ body {
 }
 .container{
   margin: 2%;
+  height: 500px;
 }
 
 .note {
@@ -30,6 +31,7 @@ body {
   
   
 }
+.react-multi-carousel-list  { padding-top: 50px !important; } 
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
@@ -189,8 +191,9 @@ color: #303133;
 }
 .slidenum{
   position:absolute;
-  right: 145px;
+  right: 12%;
   margin-top: 10px;
+  top: 75px;
   width: 35px;
 height: 20px;
 
@@ -199,13 +202,13 @@ font-weight: normal;
 }
 .heading{
   position: absolute;
-
+  top:90px;
 height: 30px;
 font-family: Noto Sans;
 font-style: normal;
 font-weight: 600;
 font-size: 22px;
-left:16px;
+left:45px;
 }
 .learn{
   color: #F58532;
@@ -234,6 +237,9 @@ left:16px;
   .wish img{
     margin-left: 50px;
   }
+  .heading{
+    top: 70px;
+  }
 }
 
 @media only screen and (max-width: 400px) and (min-width:300px){
@@ -253,7 +259,11 @@ left:16px;
   
   
   .slidenum{
-    right:110px;
+    right:120px;
+    top:60px;
+  }
+  .heading{
+    top: 70px;
   }
   .logo>img{
     width:100px;
